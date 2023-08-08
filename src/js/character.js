@@ -3,7 +3,7 @@ const types = ['Bowerman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'
 export default class Character {
   constructor(name, type) {
     if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
-      throw new Error('Имя должно содержать не менее двух и не более десяти символов!');
+      throw new Error('Имя должно содержать не менее двух и не более десяти символов и состоять из букв!');
     }
     if (!types.includes(type)) {
       throw new Error('Не корректное имя персонажа');
